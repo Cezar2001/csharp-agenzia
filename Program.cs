@@ -15,7 +15,13 @@ namespace csharp_agenzia
             Agenzia agenzia = new Agenzia("Odissea Trip");
 
             agenzia.AddImmobile(v);
+
+            Box box1 = new Box(100, "", "via Roma", 89024, "Polistena", 150);
+
+            agenzia.AddListaImmobili(new List<Immobile>() { v, a });
+
             List<Immobile> listaImmobili = agenzia.CercaImmobili("Cittanova");
+
             foreach (Immobile immobile in listaImmobili)
             {
                 Console.WriteLine(immobile);

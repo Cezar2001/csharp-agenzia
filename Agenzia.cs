@@ -46,5 +46,11 @@ namespace csharp_agenzia
 
             return this.Immobili.FindAll(i => i.Contains(key));
         }
+
+        internal void AddListaImmobili(List<Immobile> immobiles)
+        {
+            foreach (Immobile im in immobiles)
+                AddImmobile(im);
+        }
     }
 }
